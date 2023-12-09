@@ -1,0 +1,62 @@
+{
+  "store": {
+    "id": "957c990f-7818-465d-90b9-2d48e93d336b",
+    "status": "online",
+    "date_created": "2023-12-03T08:15:03.914Z",
+    "date_updated": "2023-12-03T08:15:05.546Z",
+    "geopoint": {
+      "type": "Point",
+      "coordinates": [
+        -58.4242938,
+        -34.6723701
+      ]
+    },
+    "name": "",
+    "address": "Coronel D Elia 3895, Provincia de Buenos Aires",
+    "street": "Coronel D Elia",
+    "street_number": 3895,
+    "postal_code": "B1822",
+    "place_type": null,
+    "neighborhood": null,
+    "photo": null,
+    "raw_region": "Lanús",
+    "raw_subregion": "Valentín Alsina",
+    "raw_neighborhood": null,
+    "raw_city": null,
+    "raw_country": null,
+    "raw_district": "Provincia de Buenos Aires",
+    "alerted": false,
+    "country_code": "AR",
+    "contacto": null,
+    "phone": null,
+    "token": "ExponentPushToken[E_vl9xAvlgTEWaTMOx1HJU]",
+    "alert_type": null,
+    "subregion": null,
+    "gplaces": [],
+    "iot_devices": [
+      "5095c22c-e272-4834-b124-20f45b55e4cc"
+    ],
+    "contacts": []
+  },
+  "device": {
+    "id": "5095c22c-e272-4834-b124-20f45b55e4cc",
+    "status": "enabled",
+    "date_created": "2023-12-06T06:08:20.847Z",
+    "date_updated": "2023-12-06T07:52:03.223Z",
+    "place": "957c990f-7818-465d-90b9-2d48e93d336b",
+    "alerted": true,
+    "has_neighborhood_alert": true,
+    "device_name": "phone-button-9b42",
+    "device_type": "phone_button",
+    "params": null,
+    "tuya_id": null,
+    "tuya_device": false,
+    "device_id": "7cc4d8dc-859d-46e2-a11a-de4e96bd00f6",
+    "phone": null,
+    "contact": null,
+    "sos": true
+  },
+  "changes": {},
+  "type": "manual",
+  "type": "update"
+}
