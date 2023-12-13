@@ -24,6 +24,7 @@ class DeviceStatus(Enum):
     ENABLED = "enabled"
     ACTIVATED = "activated"
     DISABLED = "disabled"
+    PUBLISHED = "published"
     pass
 
 
