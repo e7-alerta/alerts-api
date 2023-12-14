@@ -3,9 +3,4 @@ from dash.types import Store
 
 
 def update(store: Store) -> Store:
-    """
-    deletage a la api de dash
-    :param store:
-    :return:
-    """
     return dash.update(store)

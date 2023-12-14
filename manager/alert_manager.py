@@ -1,7 +1,7 @@
 from manager import device_manager
 
 
-def process_tuya_device_alert(tuya_id, sos: bool = False):
+def handle_tuya_device_alert(tuya_id, sos: bool = False):
     print(f"[tuya_device_alert] tuya_id: {tuya_id} and sos: {sos}")
 
     device = device_manager.find_by_tuya_id(tuya_id)
@@ -14,7 +14,7 @@ def process_tuya_device_alert(tuya_id, sos: bool = False):
     pass
 
 
-def process_phone_button_alert(phonebtn_id):
+def handle_phone_button_alert(phonebtn_id):
     """
     Chequea si el id del boton de panico existe en la base de datos
     si no existe, lo crea  y lo alerta

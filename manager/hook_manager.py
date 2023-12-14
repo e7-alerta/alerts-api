@@ -4,7 +4,7 @@ from dash.types import StoreAlertType, DeviceType, store_load
 from data.repositories import store_repository
 
 
-def handler_alert(payload: dict):
+def handle_device_alert(payload: dict):
     """
     check si el device esta alertado
     se actualiza el store a alertado

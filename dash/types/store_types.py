@@ -49,6 +49,9 @@ class StoreAlertType(Enum):
     MAP_BUTTON_ALERT = "map_button_alert"
     PHONE_BUTTON_ALERT = "phone_button_alert"
     SAQUEO_ALERT = "saqueo_en_comercio"
+    ACTIVIDAD_SOSPECHOSA_ALERT = "actividad_sospechosa"
+    ACCIDENTE_ALERT = "accident"
+    INCENDIO_ALERT = "incendio_en_comercio"
 
 
 """

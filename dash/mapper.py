@@ -1,31 +1,37 @@
 from dash.types import Device, DeviceStatus, DeviceType
+from dash.types.phone_types import Phone, PhoneStatus
 
 """
-{
-    "id": "1f3d153c-e925-43bd-ba05-f39bebda7450",
-    "status": "published",
-    "date_created": "2023-10-26T02:10:23.657Z",
-    "date_updated": "2023-12-03T07:39:59.782Z",
-    "place": "0fc19e07-8fe1-49d7-a87f-9b254c07faa9",
-    "alerted": false,
-    "has_neighborhood_alert": false,
-    "device_name": "valkyrie-vf1s",
-    "device_type": "door_window",
-    "params": {
-        "wifi": {
-            "ssid": "",
-            "password": ""
-        },
-        "has_ble": true
-    },
-    "tuya_id": "eb3553b506ae11cafbpmpc",
-    "door_sensor": true,
-    "motion_sensor": false,
-    "store_button": false,
-    "tuya_device": true
+ { 'id': 'b6a595c9-257e-43a5-b157-3b532d41f47f', 
+    'status': 'online', 
+    'date_created': '2023-12-14T19:01:15.029Z', 
+    'date_updated': '2023-12-14T22:22:55.475Z', 
+    'phone_number': '1136206603', 
+    'geopoint': {'type': 'Point', 'coordinates': [-58.401959, -34.6184936]}, 
+    'name': 'Gabriel Simionato', 
+    'contact': '168c5959-ef52-417c-8740-17db8f59d6ab', 
+    'place': '25a8a44c-8537-439a-892d-df2f51528b98', 
+    'push_token': 'ExponentPushToken[dX0rL3AiD9q90-JC7jIScI]', 
+    'alerted': True, 
+    'alert_type': 'saqueo_en_comercio', 
+    'alert_point': None, 'devices': []
 }
-
 """
+
+
+def phone_load(item):
+    print(item)
+    return Phone(
+        id=item["id"],
+        status=PhoneStatus(item["status"]),
+        alerted=item["alerted"],
+        alert_type=item["alert_type"],
+        alert_point=item["alert_point"],
+        phone_number=item["phone_number"],
+        push_token=item["push_token"],
+        name=item["name"],
+        contact=item["contact"],
+    )
 
 
 def device_load(item):
