@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello alerts 1.3"}
 
 
 @app.post("/api/v1/hooks/devices/handler_alert")
