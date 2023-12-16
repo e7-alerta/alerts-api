@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel, UUID4
 
 """
@@ -103,7 +103,7 @@ class Store(BaseModel):
     place_type: Optional[str] = None
     status: StoreStatus = None
     alerted: Optional[bool] = False
-    alert_type: Optional[StoreAlertType] = None
+    alert_type: Optional[List[StoreAlertType]] = None
     geo_point: Optional[dict] = None
     street: Optional[str] = None
     street_number: Optional[int] = None
