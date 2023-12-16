@@ -100,10 +100,10 @@ class StoreAlertType(Enum):
 class Store(BaseModel):
     id: str
     name: Optional[str] = None
-    place_type: Optional[str] = None
+    place_type: Optional[List[str]] = None
     status: StoreStatus = None
     alerted: Optional[bool] = False
-    alert_type: Optional[List[StoreAlertType]] = None
+    alert_type: Optional[StoreAlertType] = None
     geo_point: Optional[dict] = None
     street: Optional[str] = None
     street_number: Optional[int] = None
