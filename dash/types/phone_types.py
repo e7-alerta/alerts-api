@@ -5,6 +5,7 @@ from pydantic import BaseModel, UUID4
 
 
 class PhoneStatus(Enum):
+    ALERTED = "alerted"
     ONLINE = "online"
     DRAFT = "draft"
     PUBLISHED = "published"
