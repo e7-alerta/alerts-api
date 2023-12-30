@@ -6,7 +6,6 @@ from manager.hook_manager import handle_device_alert
 
 from manager.alert_manager import handle_phone_button_alert, handle_tuya_device_alert
 
-
 app = FastAPI()
 
 
@@ -40,6 +39,30 @@ async def tuya_alert(tuya_id: str, sos: bool = False):
     handle_tuya_device_alert(tuya_id, sos=sos)
 
     return {"mensaje": "alerta recibida", "tuya_id": tuya_id}
+
+
+@app.get("/api/v1/fotton/{phonebtn_id}/entry")
+async def phonebtn_alert(phonebtn_id: str):
+    print(f"phonebtn_id: {phonebtn_id}")
+    handle_phone_button_alert(phonebtn_id)
+
+    return {"mensaje": "alerta recibida", "phonebtn_id": phonebtn_id}
+
+
+@app.get("/api/v1/fotton/{phonebtn_id}/trigger_alarm")
+async def phonebtn_alert(phonebtn_id: str, alarm_type: str = "sos"):
+    print(f"phonebtn_id: {phonebtn_id}  and alarm_type: {alarm_type}")
+    handle_phone_button_alert(phonebtn_id)
+
+    return {"mensaje": "alerta recibida", "phonebtn_id": phonebtn_id}
+
+
+@app.get("/api/v1/alarms/phonebtn/{phonebtn_id}")
+async def phonebtn_alert(phonebtn_id: str):
+    print(f"phonebtn_id: {phonebtn_id}")
+    handle_phone_button_alert(phonebtn_id)
+
+    return {"mensaje": "alerta recibida", "phonebtn_id": phonebtn_id}
 
 
 @app.get("/api/v1/alarms/phonebtn/{phonebtn_id}")
