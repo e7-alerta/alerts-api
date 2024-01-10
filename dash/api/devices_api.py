@@ -107,6 +107,7 @@ def update(device: Device) -> Device:
 
     payload = {
         "alerted": device.alerted,
+        "alert_type": device.alert_type,
         "sos": device.sos,
         "status": device.status.value
     }

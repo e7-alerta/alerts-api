@@ -25,7 +25,7 @@ def handle_phone_button_alert(phonebtn_id: str, alert_type: str = None):
     :param phonebtn_id:
     :return:
     """
-    print(f"[phone_button_manager] phonebtn_id: {phonebtn_id} and alert_type: {alert_type}")
+    print(f"[ alert manager -  handle phone button alert  ] phonebtn_id: {phonebtn_id} and alert_type: {alert_type}")
 
     device = device_manager.find_or_create_device_by_id(phonebtn_id)
 
