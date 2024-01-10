@@ -14,7 +14,7 @@ def handle_tuya_device_alert(tuya_id, sos: bool = False):
     pass
 
 
-def handle_phone_button_alert(phonebtn_id):
+def handle_phone_button_alert(phonebtn_id: str, alert_type: str = None):
     """
     Chequea si el id del boton de panico existe en la base de datos
     si no existe, lo crea  y lo alerta
@@ -32,5 +32,5 @@ def handle_phone_button_alert(phonebtn_id):
         print(f"[phone_button_manager] device {phonebtn_id} is already alerted")
         return
 
-    device_manager.alert_device(device, sos=True)
+    device_manager.alert_device(device, alert_type=alert_type, sos=True)
     pass
