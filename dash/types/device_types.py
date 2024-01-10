@@ -33,6 +33,7 @@ class Device(BaseModel):
     status: DeviceStatus
     alerted: bool = False
     sos: bool = False
+    alert_type: Optional[str] = None
     device_type: DeviceType
     name: Optional[str] = None
     tuya_device: bool = False

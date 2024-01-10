@@ -60,14 +60,16 @@ def find_or_create_device_by_id(phonebtn_id):
     return device
 
 
-def alert_device(device: Device, sos = False):
+def alert_device(device: Device, alert_type: str = None, sos=False):
     """
     Alert a device.
+    :param alert_type:
     :param sos:
     :param device:
     :return:
     """
     device.alerted = True
     device.sos = sos
+    device.alert_type = alert_type
     device_repository.update(device)
     return None
