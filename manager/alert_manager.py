@@ -21,6 +21,7 @@ def handle_phone_button_alert(phonebtn_id: str, alert_type: str = None):
     si existe, chequea si esta alertado
     si esta alertado, no hace nada
     si no esta alertado, lo alerta
+    :param alert_type:
     :param phonebtn_id:
     :return:
     """

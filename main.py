@@ -43,7 +43,7 @@ async def tuya_alert(tuya_id: str, sos: bool = False):
 
 @app.get("/api/v1/fotton/{phonebtn_id}/entry")
 async def phonebtn_alert(phonebtn_id: str, alarm_type: str = None):
-    print(f"phonebtn_id: {phonebtn_id}")
+    print(f"phonebtn_id: {phonebtn_id} and alarm_type: {alarm_type}")
     handle_phone_button_alert(phonebtn_id, alert_type=alarm_type)
 
     return {"mensaje": "alerta recibida", "phonebtn_id": phonebtn_id}
@@ -52,7 +52,7 @@ async def phonebtn_alert(phonebtn_id: str, alarm_type: str = None):
 @app.get("/api/v1/fotton/{phonebtn_id}/trigger_alarm")
 async def phonebtn_alert(phonebtn_id: str, alarm_type: str = "sos"):
     print(f"phonebtn_id: {phonebtn_id}  and alarm_type: {alarm_type}")
-    handle_phone_button_alert(phonebtn_id)
+    handle_phone_button_alert(phonebtn_id, alert_type=alarm_type)
 
     return {"mensaje": "alerta recibida", "phonebtn_id": phonebtn_id}
 
